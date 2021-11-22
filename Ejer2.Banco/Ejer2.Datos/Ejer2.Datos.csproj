@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{416CC0ED-B107-452A-A7D8-8D5684D702CA}</ProjectGuid>
+    <ProjectGuid>{266E6867-E54A-4F7F-A859-749E52D81BA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ejer1.Entidades</RootNamespace>
-    <AssemblyName>Ejer1.Entidades</AssemblyName>
+    <RootNamespace>Ejer2.Datos</RootNamespace>
+    <AssemblyName>Ejer2.Datos</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,9 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,11 +44,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controlador.cs" />
-    <Compile Include="Cuenta.cs" />
-    <Compile Include="Cliente.cs" />
-    <Compile Include="POST\PostRta.cs" />
+    <Compile Include="ClienteMapper.cs" />
+    <Compile Include="NameValueCollectio.cs" />
+    <Compile Include="TarjetaMapper.cs" />
+    <Compile Include="WebHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ejer2.Entidades\Ejer2.Entidades.csproj">
+      <Project>{2aa0e2a6-4e7b-4fc6-9a77-5a297fac2eea}</Project>
+      <Name>Ejer2.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

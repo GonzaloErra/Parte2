@@ -1,4 +1,5 @@
 ﻿using Ejer1.Entidades;
+using Ejer1.Negocio;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,19 +14,17 @@ namespace Ejer1.WinForm
 {
     public partial class FrmCargarCliente : Form
     {
-        private List<string> _activo;
+        private ClienteServicio clienteServicio;
+        //private List<string> _activo;
         public FrmCargarCliente(FrmListarCliente FrmListar)
         {
-            _activo = new List<string>();
-            _activo.Add("Activo");
-            _activo.Add("Desactivo");
+            //_activo = new List<string>();
+            //_activo.Add("Activo");
+            //_activo.Add("Desactivo");
             this.Owner = FrmListar;
-
+            clienteServicio = new ClienteServicio();
             InitializeComponent();
         }
-
-        
-
         private void Limpiar()
         {
 
@@ -42,17 +41,6 @@ namespace Ejer1.WinForm
         }
         private void InicializarControles()
         {
-            //cmbActivo.DataSource = null;
-            cmbActivo.DataSource = this._activo;
-            //cmbActivo.DisplayMember = "Mostrar";
-            //cmbActivo.ValueMember = "Legajo";
-        }
-
-        private void Validaciones()
-        {
-
-            if ((int)cmbActivo.SelectedValue == 0)
-                throw new Exception("Seleccione un valor");
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
@@ -69,10 +57,11 @@ namespace Ejer1.WinForm
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             try
-            {
-                Cliente cli = new Cliente(Convert.ToInt32(this.txtId.Text), Convert.ToInt32(this.txtCuit.Text), this.txtEmail.Text, Convert.ToDateTime(this.txtFN),/* (bool)this.cmbActivo.SelectedItem*/this.txtNombre.Text, this.txtApellido.Text, this.txtDireccion.Text, this.txtTelefono.Text);
+            { 
 
-                ((FrmListarCliente)this.Owner).AgregarCliente(cli);
+                Cliente cli = new Cliente(Convert.ToInt32(this.txtId.Text), Convert.ToInt32(this.txtCuit.Text), this.txtEmail.Text,Convert.ToDateTime(this.txtFN.Text),this.ckActivo.Checked,this.txtNombre.Text, this.txtApellido.Text, this.txtDireccion.Text, this.txtTelefono.Text);
+
+                rta = clienteServicio.Agregar(cli);
                
                 Limpiar();
                 this.Hide();
@@ -83,5 +72,6 @@ namespace Ejer1.WinForm
                 MessageBox.Show(ex.Message);
             }
         }
+        
     }
 }

@@ -18,8 +18,10 @@ namespace Ejer1.WinForm
     {
         private ClienteServicio _clienteServ;
         private FrmCargarCliente _formCargarCliente;
-  
+        private List<Cliente> listclientes;
         
+
+
         public FrmListarCliente(Form Prop)
         {
             this.Owner = Prop;
@@ -34,22 +36,23 @@ namespace Ejer1.WinForm
             this.Owner.Show();
         }
 
-        private void CargarLista()
-        {
-            lstClientes.DataSource = null ;
-            lstClientes.DataSource = _clienteServ.GetClientes();
-            lstClientes.DisplayMember = "Mostrar";
-            lstClientes.ValueMember = "Legajo";
-        }
-        public void AgregarCliente(Cliente cli)
-        {
-            if (cli != null)
-            {
-                _clienteServ.AddCliente(cli);
-            }
-        }
+        //private void CargarLista()
+        //{
+        //    lstClientes.DataSource = null;
+        //    lstClientes.DataSource = _clienteServ.GetClientes();
+        //    lstClientes.DisplayMember = "Mostrar";
+        //    //lstClientes.ValueMember = "Nombre";
+        //}
+        //public void AgregarCliente(Cliente cli)
+        //{
+        //    if (cli != null)
+        //    {
+        //        //_clienteServ.AddCliente(cli);  //// POST
+        //        Recargar();
+        //    }
+        //}
 
-        private void btnCargarCliente_Click(object sender, EventArgs e)
+        private void btnCargarCliente_Click(object sender, EventArgs e) 
         {
             try
             {
@@ -60,6 +63,21 @@ namespace Ejer1.WinForm
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void FrmListarCliente_Load(object sender, EventArgs e)
+        {
+            Recargar();
+        }
+        private void Recargar()
+        {
+
+            listclientes = _clienteServ.Traer();
+            lstClientes.DataSource = null;
+            lstClientes.DataSource = listclientes;
+
+
+
         }
     }
 }

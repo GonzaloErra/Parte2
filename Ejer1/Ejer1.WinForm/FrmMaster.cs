@@ -22,8 +22,15 @@ namespace Ejer1.WinForm
 
         private void btnListarClientes_Click(object sender, EventArgs e)
         {
-            _formListarClientes.Show();
-            this.Hide();
+            try
+            {
+                _formListarClientes.Show();
+                this.Hide();
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

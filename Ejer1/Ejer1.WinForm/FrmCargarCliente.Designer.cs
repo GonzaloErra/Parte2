@@ -41,40 +41,39 @@ namespace Ejer1.WinForm
             this.lbDireccion = new System.Windows.Forms.Label();
             this.lbApellido = new System.Windows.Forms.Label();
             this.lbNombre = new System.Windows.Forms.Label();
-            this.lbActivo = new System.Windows.Forms.Label();
             this.lbFN = new System.Windows.Forms.Label();
             this.lbEmail = new System.Windows.Forms.Label();
             this.lbCuit = new System.Windows.Forms.Label();
             this.lbId = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnSalir = new System.Windows.Forms.Button();
-            this.cmbActivo = new System.Windows.Forms.ComboBox();
+            this.ckActivo = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtTelefono
             // 
-            this.txtTelefono.Location = new System.Drawing.Point(228, 318);
+            this.txtTelefono.Location = new System.Drawing.Point(228, 277);
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Size = new System.Drawing.Size(100, 20);
             this.txtTelefono.TabIndex = 35;
             // 
             // txtDireccion
             // 
-            this.txtDireccion.Location = new System.Drawing.Point(228, 280);
+            this.txtDireccion.Location = new System.Drawing.Point(228, 243);
             this.txtDireccion.Name = "txtDireccion";
             this.txtDireccion.Size = new System.Drawing.Size(100, 20);
             this.txtDireccion.TabIndex = 34;
             // 
             // txtApellido
             // 
-            this.txtApellido.Location = new System.Drawing.Point(228, 244);
+            this.txtApellido.Location = new System.Drawing.Point(228, 207);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.Size = new System.Drawing.Size(100, 20);
             this.txtApellido.TabIndex = 33;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(228, 218);
+            this.txtNombre.Location = new System.Drawing.Point(228, 177);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(100, 20);
             this.txtNombre.TabIndex = 32;
@@ -110,7 +109,7 @@ namespace Ejer1.WinForm
             // lbTelefono
             // 
             this.lbTelefono.AutoSize = true;
-            this.lbTelefono.Location = new System.Drawing.Point(29, 325);
+            this.lbTelefono.Location = new System.Drawing.Point(29, 284);
             this.lbTelefono.Name = "lbTelefono";
             this.lbTelefono.Size = new System.Drawing.Size(49, 13);
             this.lbTelefono.TabIndex = 26;
@@ -119,7 +118,7 @@ namespace Ejer1.WinForm
             // lbDireccion
             // 
             this.lbDireccion.AutoSize = true;
-            this.lbDireccion.Location = new System.Drawing.Point(29, 287);
+            this.lbDireccion.Location = new System.Drawing.Point(29, 250);
             this.lbDireccion.Name = "lbDireccion";
             this.lbDireccion.Size = new System.Drawing.Size(52, 13);
             this.lbDireccion.TabIndex = 25;
@@ -128,7 +127,7 @@ namespace Ejer1.WinForm
             // lbApellido
             // 
             this.lbApellido.AutoSize = true;
-            this.lbApellido.Location = new System.Drawing.Point(29, 251);
+            this.lbApellido.Location = new System.Drawing.Point(29, 214);
             this.lbApellido.Name = "lbApellido";
             this.lbApellido.Size = new System.Drawing.Size(44, 13);
             this.lbApellido.TabIndex = 24;
@@ -137,20 +136,11 @@ namespace Ejer1.WinForm
             // lbNombre
             // 
             this.lbNombre.AutoSize = true;
-            this.lbNombre.Location = new System.Drawing.Point(29, 225);
+            this.lbNombre.Location = new System.Drawing.Point(29, 184);
             this.lbNombre.Name = "lbNombre";
             this.lbNombre.Size = new System.Drawing.Size(44, 13);
             this.lbNombre.TabIndex = 23;
             this.lbNombre.Text = "Nombre";
-            // 
-            // lbActivo
-            // 
-            this.lbActivo.AutoSize = true;
-            this.lbActivo.Location = new System.Drawing.Point(29, 196);
-            this.lbActivo.Name = "lbActivo";
-            this.lbActivo.Size = new System.Drawing.Size(37, 13);
-            this.lbActivo.TabIndex = 22;
-            this.lbActivo.Text = "Activo";
             // 
             // lbFN
             // 
@@ -182,7 +172,7 @@ namespace Ejer1.WinForm
             // lbId
             // 
             this.lbId.AutoSize = true;
-            this.lbId.Location = new System.Drawing.Point(29, 53);
+            this.lbId.Location = new System.Drawing.Point(29, 52);
             this.lbId.Name = "lbId";
             this.lbId.Size = new System.Drawing.Size(16, 13);
             this.lbId.TabIndex = 18;
@@ -208,20 +198,22 @@ namespace Ejer1.WinForm
             this.btnSalir.UseVisualStyleBackColor = true;
             this.btnSalir.Click += new System.EventHandler(this.btnSalir_Click);
             // 
-            // cmbActivo
+            // ckActivo
             // 
-            this.cmbActivo.FormattingEnabled = true;
-            this.cmbActivo.Location = new System.Drawing.Point(228, 187);
-            this.cmbActivo.Name = "cmbActivo";
-            this.cmbActivo.Size = new System.Drawing.Size(100, 21);
-            this.cmbActivo.TabIndex = 38;
+            this.ckActivo.AutoSize = true;
+            this.ckActivo.Location = new System.Drawing.Point(228, 327);
+            this.ckActivo.Name = "ckActivo";
+            this.ckActivo.Size = new System.Drawing.Size(56, 17);
+            this.ckActivo.TabIndex = 38;
+            this.ckActivo.Text = "Activo";
+            this.ckActivo.UseVisualStyleBackColor = true;
             // 
             // FrmCargarCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(362, 433);
-            this.Controls.Add(this.cmbActivo);
+            this.Controls.Add(this.ckActivo);
             this.Controls.Add(this.btnSalir);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtTelefono);
@@ -236,7 +228,6 @@ namespace Ejer1.WinForm
             this.Controls.Add(this.lbDireccion);
             this.Controls.Add(this.lbApellido);
             this.Controls.Add(this.lbNombre);
-            this.Controls.Add(this.lbActivo);
             this.Controls.Add(this.lbFN);
             this.Controls.Add(this.lbEmail);
             this.Controls.Add(this.lbCuit);
@@ -262,14 +253,13 @@ namespace Ejer1.WinForm
         private System.Windows.Forms.Label lbDireccion;
         private System.Windows.Forms.Label lbApellido;
         private System.Windows.Forms.Label lbNombre;
-        private System.Windows.Forms.Label lbActivo;
         private System.Windows.Forms.Label lbFN;
         private System.Windows.Forms.Label lbEmail;
         private System.Windows.Forms.Label lbCuit;
         private System.Windows.Forms.Label lbId;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnSalir;
-        private System.Windows.Forms.ComboBox cmbActivo;
+        private System.Windows.Forms.CheckBox ckActivo;
     }
 }
 

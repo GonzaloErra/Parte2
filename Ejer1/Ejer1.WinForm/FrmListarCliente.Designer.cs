@@ -36,7 +36,7 @@ namespace Ejer1.WinForm
             // 
             // btnCargarCliente
             // 
-            this.btnCargarCliente.Location = new System.Drawing.Point(159, 65);
+            this.btnCargarCliente.Location = new System.Drawing.Point(228, 63);
             this.btnCargarCliente.Name = "btnCargarCliente";
             this.btnCargarCliente.Size = new System.Drawing.Size(75, 23);
             this.btnCargarCliente.TabIndex = 3;
@@ -47,14 +47,14 @@ namespace Ejer1.WinForm
             // lstClientes
             // 
             this.lstClientes.FormattingEnabled = true;
-            this.lstClientes.Location = new System.Drawing.Point(36, 48);
+            this.lstClientes.Location = new System.Drawing.Point(12, 54);
             this.lstClientes.Name = "lstClientes";
-            this.lstClientes.Size = new System.Drawing.Size(94, 251);
+            this.lstClientes.Size = new System.Drawing.Size(198, 238);
             this.lstClientes.TabIndex = 2;
             // 
             // btnVolver
             // 
-            this.btnVolver.Location = new System.Drawing.Point(159, 258);
+            this.btnVolver.Location = new System.Drawing.Point(228, 259);
             this.btnVolver.Name = "btnVolver";
             this.btnVolver.Size = new System.Drawing.Size(75, 23);
             this.btnVolver.TabIndex = 4;
@@ -72,6 +72,7 @@ namespace Ejer1.WinForm
             this.Controls.Add(this.lstClientes);
             this.Name = "FrmListarCliente";
             this.Text = "Listar Cliente";
+            this.Load += new System.EventHandler(this.FrmListarCliente_Load);
             this.ResumeLayout(false);
 
         }
