@@ -13,10 +13,11 @@ namespace Ejer2.Banco.WinForm
     public partial class Master : Form
     {
         private FrmCliente _frmCliente;
-        private Frm
+        private FrmTarjeta _frmTarjeta;
         public Master()
         {
             _frmCliente = new FrmCliente(this);
+            _frmTarjeta = new FrmTarjeta(this);
             InitializeComponent();
         }
 
@@ -28,7 +29,8 @@ namespace Ejer2.Banco.WinForm
 
         private void btnTarjeta_Click(object sender, EventArgs e)
         {
-
+            this.Hide();
+            _frmTarjeta.Show();
         }
     }
 }

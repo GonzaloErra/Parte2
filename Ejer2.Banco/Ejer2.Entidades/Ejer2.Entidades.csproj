@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cliente.cs" />
+    <Compile Include="Enum\Periodo.cs" />
     <Compile Include="Enum\TipoTarjeta.cs" />
     <Compile Include="TarjetaCredito.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

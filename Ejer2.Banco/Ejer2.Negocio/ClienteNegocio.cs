@@ -29,7 +29,6 @@ namespace Ejer2.Negocio
                 throw new Exception("No se pudo insertar el cliente. Motivo " + result.Error);
             return result;
 
-
         }
     }
 }

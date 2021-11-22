@@ -52,5 +52,12 @@ namespace Ejer2.Entidades
         {
             return string.Format("{0}) {1} - {2}", this.id, this.Apellido, this.Nombre);
         }
+        public string Mostrar
+        {
+            get
+            {
+                return $"{this.id}) {this.Nombre}-{this.Apellido}";
+            }
+        }
     }
 }

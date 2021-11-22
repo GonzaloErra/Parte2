@@ -73,7 +73,7 @@ namespace Ejer2.Banco.WinForm
             // lstTarjeta
             // 
             this.lstTarjeta.FormattingEnabled = true;
-            this.lstTarjeta.Location = new System.Drawing.Point(475, 77);
+            this.lstTarjeta.Location = new System.Drawing.Point(475, 91);
             this.lstTarjeta.Name = "lstTarjeta";
             this.lstTarjeta.Size = new System.Drawing.Size(218, 199);
             this.lstTarjeta.TabIndex = 3;
@@ -98,6 +98,7 @@ namespace Ejer2.Banco.WinForm
             // 
             // txCantidadPlasticos
             // 
+            this.txCantidadPlasticos.Enabled = false;
             this.txCantidadPlasticos.Location = new System.Drawing.Point(577, 332);
             this.txCantidadPlasticos.Name = "txCantidadPlasticos";
             this.txCantidadPlasticos.Size = new System.Drawing.Size(100, 20);
@@ -105,6 +106,7 @@ namespace Ejer2.Banco.WinForm
             // 
             // txPromedio
             // 
+            this.txPromedio.Enabled = false;
             this.txPromedio.Location = new System.Drawing.Point(577, 375);
             this.txPromedio.Name = "txPromedio";
             this.txPromedio.Size = new System.Drawing.Size(100, 20);
@@ -141,7 +143,7 @@ namespace Ejer2.Banco.WinForm
             // 
             this.txCompra.Location = new System.Drawing.Point(204, 274);
             this.txCompra.Name = "txCompra";
-            this.txCompra.Size = new System.Drawing.Size(100, 20);
+            this.txCompra.Size = new System.Drawing.Size(148, 20);
             this.txCompra.TabIndex = 13;
             // 
             // lbLimite
@@ -157,10 +159,11 @@ namespace Ejer2.Banco.WinForm
             // 
             this.btnCalcular.Location = new System.Drawing.Point(80, 321);
             this.btnCalcular.Name = "btnCalcular";
-            this.btnCalcular.Size = new System.Drawing.Size(272, 31);
+            this.btnCalcular.Size = new System.Drawing.Size(272, 37);
             this.btnCalcular.TabIndex = 15;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
+            this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
             // 
             // lbNPlasticos
             // 
@@ -173,42 +176,47 @@ namespace Ejer2.Banco.WinForm
             // 
             // txPlasticos
             // 
+            this.txPlasticos.Enabled = false;
             this.txPlasticos.Location = new System.Drawing.Point(204, 380);
             this.txPlasticos.Name = "txPlasticos";
-            this.txPlasticos.Size = new System.Drawing.Size(100, 20);
+            this.txPlasticos.Size = new System.Drawing.Size(148, 20);
             this.txPlasticos.TabIndex = 17;
             // 
             // btnAlta
             // 
-            this.btnAlta.Location = new System.Drawing.Point(80, 414);
+            this.btnAlta.Location = new System.Drawing.Point(81, 406);
             this.btnAlta.Name = "btnAlta";
-            this.btnAlta.Size = new System.Drawing.Size(272, 32);
+            this.btnAlta.Size = new System.Drawing.Size(271, 40);
             this.btnAlta.TabIndex = 18;
             this.btnAlta.Text = "Alta";
             this.btnAlta.UseVisualStyleBackColor = true;
+            this.btnAlta.Click += new System.EventHandler(this.btnAlta_Click);
             // 
             // cmbTarjeta
             // 
+            this.cmbTarjeta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTarjeta.FormattingEnabled = true;
             this.cmbTarjeta.Location = new System.Drawing.Point(204, 113);
             this.cmbTarjeta.Name = "cmbTarjeta";
-            this.cmbTarjeta.Size = new System.Drawing.Size(121, 21);
+            this.cmbTarjeta.Size = new System.Drawing.Size(148, 21);
             this.cmbTarjeta.TabIndex = 19;
             // 
             // cmbCierre
             // 
+            this.cmbCierre.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCierre.FormattingEnabled = true;
             this.cmbCierre.Location = new System.Drawing.Point(204, 158);
             this.cmbCierre.Name = "cmbCierre";
-            this.cmbCierre.Size = new System.Drawing.Size(121, 21);
+            this.cmbCierre.Size = new System.Drawing.Size(148, 21);
             this.cmbCierre.TabIndex = 20;
             // 
             // cmbCliente
             // 
+            this.cmbCliente.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbCliente.FormattingEnabled = true;
             this.cmbCliente.Location = new System.Drawing.Point(204, 210);
             this.cmbCliente.Name = "cmbCliente";
-            this.cmbCliente.Size = new System.Drawing.Size(121, 21);
+            this.cmbCliente.Size = new System.Drawing.Size(148, 21);
             this.cmbCliente.TabIndex = 21;
             // 
             // FrmTarjeta
@@ -237,6 +245,7 @@ namespace Ejer2.Banco.WinForm
             this.Controls.Add(this.lbTarjeta);
             this.Name = "FrmTarjeta";
             this.Text = "Banco";
+            this.Load += new System.EventHandler(this.FrmTarjeta_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

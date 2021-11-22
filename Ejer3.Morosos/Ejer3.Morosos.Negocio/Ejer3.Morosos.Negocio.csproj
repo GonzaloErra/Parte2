@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{698601DC-5556-4F6D-A24E-62B6B48653DE}</ProjectGuid>
+    <ProjectGuid>{BEF12337-ECD2-4E90-9C76-F45954E99656}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ejer2.Negocio</RootNamespace>
-    <AssemblyName>Ejer2.Negocio</AssemblyName>
+    <RootNamespace>Ejer3.Morosos.Negocio</RootNamespace>
+    <AssemblyName>Ejer3.Morosos.Negocio</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -31,6 +31,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,19 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClienteNegocio.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TarjetaNegocio.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Ejer2.Datos\Ejer2.Datos.csproj">
-      <Project>{266e6867-e54a-4f7f-a859-749e52d81ba8}</Project>
-      <Name>Ejer2.Datos</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Ejer2.Entidades\Ejer2.Entidades.csproj">
-      <Project>{2aa0e2a6-4e7b-4fc6-9a77-5a297fac2eea}</Project>
-      <Name>Ejer2.Entidades</Name>
-    </ProjectReference>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

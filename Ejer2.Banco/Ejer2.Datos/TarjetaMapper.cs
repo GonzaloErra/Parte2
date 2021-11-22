@@ -40,7 +40,7 @@ namespace Ejer2.Datos
             n.Add("peridoVencimiento", tarjeta.PeriodoVencimiento.ToString());
             n.Add("limiteCompra", tarjeta.LimiteCompra.ToString());
             n.Add("nroPlastico", tarjeta.NroPlastico);
-            n.Add("usario", "89");
+            n.Add("usuario", "89");
             return n;
 
         }
